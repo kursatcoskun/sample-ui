@@ -1,7 +1,56 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": false
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "ui-kit-lib": {
+      "projectType": "library",
+      "root": "projects/ui-kit-lib",
+      "sourceRoot": "projects/ui-kit-lib/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ui-kit-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ui-kit-lib/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ui-kit-lib/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ui-kit-lib/src/test.ts",
+            "tsConfig": "projects/ui-kit-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/ui-kit-lib/karma.conf.js"
+          }
+        }
+      }
+    },
+    "storybook": {
+      "projectType": "application",
+      "root": "stories",
+      "sourceRoot": "stories",
+      "architect": {
+        "build": {
+          "options": {
+            "tsConfig": "tsconfig.json",
+            "styles": [],
+            "scripts": []
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "ui-kit-lib"
 }

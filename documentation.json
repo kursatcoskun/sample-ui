@@ -1,0 +1,347 @@
+{
+    "pipes": [],
+    "interfaces": [],
+    "injectables": [
+        {
+            "name": "UiKitLibService",
+            "id": "injectable-UiKitLibService-55c54c961b3ff193dc843be73f36a7ffdaefab9b55e68081660e8426526955ddc28ef23b627094babd466d431f164595c2e13f5261093bc0f7c99dc5dc931d88",
+            "file": "projects/ui-kit-lib/src/lib/ui-kit-lib.service.ts",
+            "properties": [],
+            "methods": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "description": "",
+            "rawdescription": "\n",
+            "sourceCode": "import { Injectable } from '@angular/core';\n\n@Injectable({\n  providedIn: 'root'\n})\nexport class UiKitLibService {\n\n  constructor() { }\n}\n",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 6
+            },
+            "type": "injectable"
+        }
+    ],
+    "guards": [],
+    "interceptors": [],
+    "classes": [],
+    "directives": [],
+    "components": [
+        {
+            "name": "SampleComponent",
+            "id": "component-SampleComponent-92efa4c3a8437e79f4c7dde0be8c4091c76532060a40f11a31a41086b3ad6a8e08a6a22da5ca3788ac0184bd1cef93fa3162efe11aa03493da0122f13757c668",
+            "file": "projects/ui-kit-lib/src/lib/components/sample-component/sample.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "sample-component",
+            "styleUrls": [],
+            "styles": [],
+            "template": "<h1>{{ label }}</h1>\n",
+            "templateUrl": [],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "label",
+                    "defaultValue": "'Sample Label'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 13,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from \"@angular/core\";\n\n@Component({\n  selector: 'sample-component',\n  template: `\n    <h1>{{ label }}</h1>\n  `,\n  styles: [\n  ]\n})\nexport class SampleComponent {\n\n  @Input() label = 'Sample Label';\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": ""
+        },
+        {
+            "name": "UiKitLibComponent",
+            "id": "component-UiKitLibComponent-956fe6e0e0ac2f6fc63231295f105862e6837b18823ba881eaa259ecf636364bad272a69e16cc3e4341c4f4ba153fd5c927c86e3e68d07ecdcc1a2833c8e03ee",
+            "file": "projects/ui-kit-lib/src/lib/ui-kit-lib.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "lib-ui-kit-lib",
+            "styleUrls": [],
+            "styles": [],
+            "template": "<p>\n  ui-kit-lib works!\n</p>\n",
+            "templateUrl": [],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 17,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'lib-ui-kit-lib',\n  template: `\n    <p>\n      ui-kit-lib works!\n    </p>\n  `,\n  styles: [\n  ]\n})\nexport class UiKitLibComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 13
+            },
+            "implements": [
+                "OnInit"
+            ]
+        }
+    ],
+    "modules": [
+        {
+            "name": "UiKitLibModule",
+            "id": "module-UiKitLibModule-41ebcb006a38d0d74f3e3c3fef979dcdae9c6c661e704c224e95dd52c399c81231cf0d4069d74205d190664b1f331bc23b71b76b36acbebcbee33132fad5312e",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "projects/ui-kit-lib/src/lib/ui-kit-lib.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { SampleComponent } from './components/sample-component/sample.component';\nimport { UiKitLibComponent } from './ui-kit-lib.component';\n\n@NgModule({\n  declarations: [UiKitLibComponent, SampleComponent],\n  imports: [],\n  exports: [UiKitLibComponent, SampleComponent],\n})\nexport class UiKitLibModule {}\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "SampleComponent"
+                        },
+                        {
+                            "name": "UiKitLibComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": [
+                        {
+                            "name": "SampleComponent"
+                        },
+                        {
+                            "name": "UiKitLibComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        }
+    ],
+    "miscellaneous": {
+        "variables": [
+            {
+                "name": "context",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui-kit-lib/src/test.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
+            },
+            {
+                "name": "require",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui-kit-lib/src/test.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "literal type"
+            },
+            {
+                "name": "Sample",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui-kit-lib/src/lib/components/sample-component/sample.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui-kit-lib/src/lib/components/sample-component/sample.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<SampleComponent>",
+                "defaultValue": "(args: SampleComponent) => ({\n  props: args,\n})"
+            }
+        ],
+        "functions": [],
+        "typealiases": [],
+        "enumerations": [],
+        "groupedVariables": {
+            "projects/ui-kit-lib/src/test.ts": [
+                {
+                    "name": "context",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui-kit-lib/src/test.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
+                },
+                {
+                    "name": "require",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui-kit-lib/src/test.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "literal type"
+                }
+            ],
+            "projects/ui-kit-lib/src/lib/components/sample-component/sample.stories.ts": [
+                {
+                    "name": "Sample",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui-kit-lib/src/lib/components/sample-component/sample.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui-kit-lib/src/lib/components/sample-component/sample.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<SampleComponent>",
+                    "defaultValue": "(args: SampleComponent) => ({\n  props: args,\n})"
+                }
+            ]
+        },
+        "groupedFunctions": {},
+        "groupedEnumerations": {},
+        "groupedTypeAliases": {}
+    },
+    "routes": [],
+    "coverage": {
+        "count": 0,
+        "status": "low",
+        "files": [
+            {
+                "filePath": "projects/ui-kit-lib/src/lib/components/sample-component/sample.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "SampleComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui-kit-lib/src/lib/components/sample-component/sample.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Sample",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui-kit-lib/src/lib/components/sample-component/sample.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui-kit-lib/src/lib/ui-kit-lib.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "UiKitLibComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui-kit-lib/src/lib/ui-kit-lib.service.ts",
+                "type": "injectable",
+                "linktype": "injectable",
+                "name": "UiKitLibService",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui-kit-lib/src/test.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "context",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui-kit-lib/src/test.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "require",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            }
+        ]
+    }
+}
